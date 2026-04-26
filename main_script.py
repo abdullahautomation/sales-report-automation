@@ -20,9 +20,7 @@ def start(file_name, output_file_name):
     df["Salesperson"] = df["Salesperson"].str.strip().str.title()
     # print("----Cleaned_Data----")
     # print(df)
-    total_sales = df["Sale_Amount"].sum()
-    top_product = df.groupby("Product")["Sale_Amount"].sum().idxmax()
-    top_saler_persons = df.groupby("Salesperson")["Sale_Amount"].sum().idxmax()
+    
  
     monthly = df.groupby("Month")["Sale_Amount"].sum().reset_index()
     monthly.columns = ["Month", "Total_Sales"]
