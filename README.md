@@ -6,7 +6,8 @@ This tool takes a messy Excel sales file and automatically:
 - Generates a professional formatted report
 - Creates Monthly and Product summary sheets
 - Adds bar charts automatically
-
+## Demo
+![Sales Report Automation Tool](demo.png)
 ## Requirements
 - Python 3.x
 - Libraries: pandas, openpyxl
