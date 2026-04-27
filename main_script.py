@@ -22,6 +22,7 @@ def start(file_name, output_file_name):
     # print(df)
     
  
+
     monthly = df.groupby("Month")["Sale_Amount"].sum().reset_index()
     monthly.columns = ["Month", "Total_Sales"]
     product = df.groupby("Product")["Sale_Amount"].sum().reset_index()
