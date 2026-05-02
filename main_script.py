@@ -4,6 +4,8 @@ from openpyxl.chart import BarChart, Reference
 from openpyxl.styles import Font, Alignment, Border, PatternFill, Side, Border
 from openpyxl.utils import get_column_letter
 def start(file_name, output_file_name):
+    file_name = f"{file_name}.xlsx"
+    output_file_name= f"{output_file_name}.xlsx"
     try:
         df = pd.read_excel(file_name)
     except Exception as e:
@@ -128,6 +130,6 @@ def start(file_name, output_file_name):
     workbook.close()
     print("Done!")
 if __name__ == "__main__":
-    a = str(input("Enter the file name you want to clean: "))
-    b = str(input("Enter the output file name: "))
-    start(a, b)
+#     a = str(input("Enter the file name you want to clean: "))
+#     b = str(input("Enter the output file name: "))
+    start("raw_sales_data.xlsx", "output.xlsx")
